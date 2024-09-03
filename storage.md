@@ -1,9 +1,9 @@
 # heap and stack 
 
-## heap 
+## heap (non-primitive)
 
-heap storage is used in non primritive data types such as array, object and can be changed because they provide teh reference of the specified code. 
+Heap storage is used in non primritive data types such as array, object and can be changed because they provide teh reference of the specified code. 
 
-## stack 
+## stack (primitive)
 
-stack storage is used in primitive data type such as string, number provides a copy of the code 
+Stack storage is used in primitive data type such as string, number and provides a copy of the code that's why orignal code remains unchanged.
