@@ -54,3 +54,56 @@ returns the part of the array and doesn't change the original array, main differ
 myArr.slice(1, 3)  starts at index 1 and ends at index 3 , (includes index 3)
 returns the part of the array and changes the original array.
 
+## concat
+
+returns a new array with combined elements of any given two arrays
+
+```js
+let allArr = myArr.concat(myArr2)
+```
+
+## spread operator (...)
+
+returns a new array, can add multiple arrays into a single array 
+
+```js
+let allArr = [...myArr, ...myArr2]
+```
+
+## .flat 
+
+.flat(debt amonutr ex:- 1,2, infinity)
+used to merge all the subarray elements in the array into a single array like it was just a single array wthout any sub array parts.
+
+## Array .isArray()
+
+to know if the value is array 
+
+## Array .from()
+
+converts values into an array like objects,strings etc
+
+Array.from({name : "messi"}) // should state if you want to convert the keys of the objects or values otherwise outcome: [] 
+
+```js 
+const obj = { name: "messi" };
+
+// Get an array of the keys of the object
+const keysArray = Object.keys(obj); // ['name']
+
+console.log(keysArray);
+```
+
+## Array .of()
+
+takes multiple values and converts them into an array 
+
+```js
+
+let v1 = "hellow"
+let v2= 23
+
+console.log(Array.of(v1, v2));
+
+// [ 'hellow', 23 ]
+```
