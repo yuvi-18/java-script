@@ -32,11 +32,11 @@ to remove the front element
 
 # some methods of Arrays 
 
-# includes
+## .includes
 
 myArr.includes(4)  // true, false
 
-# indexof
+## .indexof
 
 myArr.indexof(73) // -1 if not in myArr
 
@@ -44,4 +44,13 @@ myArr.indexof(73) // -1 if not in myArr
 
 myArr.join //  converts all the elements of an array into an string
 
+## .slice()
+ 
+myArr.slice(1, 3) // starts at index 1 and ends at index 2 , (doesn't include index 3)
+returns the part of the array and doesn't change the original array, main difference between slice and splice
+
+## .splice()
+
+myArr.slice(1, 3)  starts at index 1 and ends at index 3 , (includes index 3)
+returns the part of the array and changes the original array.
 
