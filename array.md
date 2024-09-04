@@ -107,3 +107,9 @@ console.log(Array.of(v1, v2));
 
 // [ 'hellow', 23 ]
 ```
+
+## Take strings and split them into an array 
+
+The .split() method takes a string and splits it into an array of strings. can pass it a string of characters or a RegEx to use as a separator
+
+.split('separator')

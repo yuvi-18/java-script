@@ -1,0 +1,1 @@
+1. input se strings values aati hai
