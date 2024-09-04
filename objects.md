@@ -25,7 +25,51 @@ console.log(obj["name hai uska"])
 
 ## combine objects 
 
+## .assign
+
 ```js
+
+// obj3 = Object.assign(target, source)
+
 const obj3 = Object.assign({}, obj1 , obj2)
 ```
 
+## .spread operator 
+
+same as array
+
+## access objects inside an arrray 
+
+```js
+const users = [
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+]
+
+users[1].email
+```
+
+## access keys of an object 
+
+```js
+Object.keys(obj1);
+Object.values(obj1);
+
+//returns an array
+```
+
+## to check property 
+
+.hasOwnProperty('email')
+
+// boolean
