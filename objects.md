@@ -87,3 +87,13 @@ console.log(n);
 
 // 454
 ```
+
+## json 
+
+```js
+{
+    "name": "hitesh",
+    "coursename": "js in hindi",
+    "price": "free"
+}
+```
