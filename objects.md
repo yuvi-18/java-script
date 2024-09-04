@@ -4,7 +4,6 @@
 access objects
 
 ```js
-
 const sym = Symbol("ok")
 
 let obj = {
@@ -22,5 +21,11 @@ Object.freeze(obj) // freezes the object so no values can be changed
 
 console.log(obj.age)
 console.log(obj["name hai uska"])
+```
+
+## combine objects 
+
+```js
+const obj3 = Object.assign({}, obj1 , obj2)
 ```
 
