@@ -73,3 +73,17 @@ Object.values(obj1);
 .hasOwnProperty('email')
 
 // boolean
+
+## destructuring of object 
+
+```js
+const oji = {
+    name:454,
+    age:89
+}
+
+const {name:n} = oji
+console.log(n);
+
+// 454
+```

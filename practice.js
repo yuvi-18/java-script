@@ -29,6 +29,15 @@ let obj = {
 
 obj.newKey = "i am new"
 
-console.log(obj.age)
-console.log(obj["name hai uska"])
-console.log(obj);
+// console.log(obj.age)
+// console.log(obj["name hai uska"])
+// console.log(obj);
+
+
+const oji = {
+    name:454,
+    age:89
+}
+
+const {name:n} = oji
+// console.log(n);
