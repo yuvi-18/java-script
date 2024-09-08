@@ -116,6 +116,7 @@ The .split() method takes a string and splits it into an array of strings. can p
 
 ```js
 
+
 const data = "one;two;three;four";
 const parts = data.split(/;/);
 console.log(parts); // ["one", "two", "three", "four"]
