@@ -124,3 +124,7 @@ console.log(parts); // ["one", "two", "three", "four"]
 ## .filter()
 
 The .filter() method will allow to filter elements out of an array, creating a new array in the process.
+
+## set
+
+set is data structure that only allows unique values and removes any duplicates.
