@@ -125,6 +125,39 @@ console.log(parts); // ["one", "two", "three", "four"]
 
 The .filter() method will allow to filter elements out of an array, creating a new array in the process.
 
-## set
+## Set (has , delete , add , clear)
 
 set is data structure that only allows unique values and removes any duplicates.
+
+```js
+// Create a new Set to store user IDs
+const userIDs = new Set();
+
+// Adding user IDs
+userIDs.add(101);
+userIDs.add(102);
+userIDs.add(103);
+userIDs.add(101); // This will be ignored, as 101 is already in the set
+
+// Check if a user ID exists
+console.log(userIDs.has(102)); // true
+console.log(userIDs.has(104)); // false
+
+// Get the size of the Set
+console.log(`Total unique user IDs: ${userIDs.size}`); // Total unique user IDs: 3
+
+// Remove a user ID
+userIDs.delete(102);
+console.log(userIDs.has(102)); // false
+
+// Iterate over the Set to display user IDs
+console.log("Current user IDs:");
+userIDs.forEach(id => {
+    console.log(id);
+});
+
+// Clear all user IDs
+userIDs.clear();
+console.log(`Total unique user IDs after clearing: ${userIDs.size}`); // 0
+```
+
