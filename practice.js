@@ -41,3 +41,5 @@ const oji = {
 
 const {name:n} = oji
 // console.log(n);
+
+
