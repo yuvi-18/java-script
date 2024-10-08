@@ -54,3 +54,5 @@ const maphogaya = mapHu.map((el)=> el + 10)
 // console.log(mapHu);
 // console.log(maphogaya);
 
+const dates = ["2024-1-23", "2023-2-12", "2019-5-13"]
+
