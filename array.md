@@ -144,6 +144,9 @@ console.log(filter); // [ 2,3,4,5,6,7,8,9,20]
 console.log(newFilter); // [6,7,8,9,20]
 ```
 
+## .map()
+
+
 ## Set (has , delete , add , clear)
 
 set is data structure that only allows unique values and removes any duplicates.
