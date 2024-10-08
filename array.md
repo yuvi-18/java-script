@@ -124,6 +124,25 @@ console.log(parts); // ["one", "two", "three", "four"]
 ## .filter()
 
 The .filter() method will allow to filter elements out of an array, creating a new array in the process.
+it creates a new array and doesn't modify the original array.
+
+```js
+const people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 20 },
+  { name: 'Charlie', age: 30 },
+];
+
+const adults = people.filter(person => person.age >= 21);
+console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 }]
+
+// another example
+const filter = [2,3,4,5,6,7,8,9,20]
+
+const newFilter = filter.filter((num)=> num > 5)
+console.log(filter); // [ 2,3,4,5,6,7,8,9,20]
+console.log(newFilter); // [6,7,8,9,20]
+```
 
 ## Set (has , delete , add , clear)
 

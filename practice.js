@@ -41,3 +41,10 @@ const oji = {
 
 const {name:n} = oji
 // console.log(n);
+
+
+const filter = [2,3,4,5,6,7,8,9,20]
+
+const newFilter = filter.filter((num)=> num > 5)
+console.log(filter);
+console.log(newFilter);
