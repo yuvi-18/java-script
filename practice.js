@@ -46,5 +46,11 @@ const {name:n} = oji
 const filter = [2,3,4,5,6,7,8,9,20]
 
 const newFilter = filter.filter((num)=> num > 5)
-console.log(filter);
-console.log(newFilter);
+// console.log(filter);
+// console.log(newFilter);
+
+const mapHu= [ 2,3,4,5,6,7,8]
+const maphogaya = mapHu.map((el)=> el + 10)
+// console.log(mapHu);
+// console.log(maphogaya);
+
