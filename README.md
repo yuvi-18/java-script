@@ -4,6 +4,7 @@ This is a practice folder or notes for java script where i have kept some import
 ## questions or mini projects
 ## practice folder
 ## some notes
+## strings
 ## data types 
 ## storage types
 ## arrays
