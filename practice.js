@@ -1,4 +1,4 @@
-const myArr = [1,2,3,4,5]
+const myArr = [1, 2, 3, 4, 5]
 
 // console.log(myArr);
 
@@ -6,12 +6,12 @@ myArr.push(3)
 // console.log(myArr);
 
 
-const arr2 = [2,3,4,"shaktiman"] 
+const arr2 = [2, 3, 4, "shaktiman"]
 myArr.push(arr2)
 // console.log(myArr);
 
 let v1 = "hellow"
-let v2= 23
+let v2 = 23
 
 // console.log(Array.of(v1, v2));
 
@@ -20,10 +20,10 @@ let v2= 23
 const sym = Symbol("ok")
 
 let obj = {
-    name:"gv",
+    name: "gv",
     [sym]: "ok",
-    age:18,
-    emai:"gv@gmail.com",
+    age: 18,
+    emai: "gv@gmail.com",
     "name hai uska": "chomu"
 }
 
@@ -35,25 +35,30 @@ obj.newKey = "i am new"
 
 
 const oji = {
-    name:454,
-    age:89
+    name: 454,
+    age: 89
 }
 
-const {name:n} = oji
+const { name: n } = oji
 // console.log(n);
 
 
-const filter = [2,3,4,5,6,7,8,9,20]
+const filter = [2, 3, 4, 5, 6, 7, 8, 9, 20]
 
-const newFilter = filter.filter((num)=> num > 5)
+const newFilter = filter.filter((num) => num > 5)
 // console.log(filter);
 // console.log(newFilter);
 
-const mapHu= [ 2,3,4,5,6,7,8]
-const maphogaya = mapHu.map((el)=> el + 10)
+const mapHu = [2, 3, 4, 5, 6, 7, 8]
+const maphogaya = mapHu.map((el) => el + 10)
 // console.log(mapHu);
 // console.log(maphogaya);
 
 const dates = ["2024-1-23", "2023-2-12", "2019-5-13"]
+const formattedDates = dates.map(formatDates);
 
-formated
+function formatDates(el) {
+    const parts = el.split("-")
+    return `${parts[0]}/${parts[1]}/${parts[2]}`
+}
+console.log(formattedDates);
