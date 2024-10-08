@@ -149,15 +149,47 @@ console.log(newFilter); // [6,7,8,9,20]
 The .map() method in JavaScript is an array method that creates a new array by applying a provided function to each element of an existing array. It transforms each element in the original array and returns a new array with the transformed values, similar to filter, behaves like 'foreach' loop.
 
 ```js
-const mapHu= [ 2,3,4,5,6,7,8]
+const mapHu = [ 2,3,4,5,6,7,8]
 const maphogaya = mapHu.map((el)=> el + 10)
 console.log(mapHu); // [ 2,3,4,5,6,7,8]
 console.log(maphogaya); // [ 12, 13, 14, 15, 16, 17, 18]
 ```
 
+## method chaining 
+
+Method chaining in JavaScript allows you to call multiple methods on the same object in a single line of code
+
+```js 
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Chaining map and filter
+const result = numbers
+  .map(num => num * 2)    // Double each number
+  .filter(num => num > 5); // Keep only numbers greater than 5
+
+console.log(result); // Output: [6, 8, 10]
+
+```
+
 ## .reduce()
 
+The reduce() method in JavaScript is an array method that executes a reducer function on each element of the array, resulting in a single output value. 
+Reducer function ek aisa function hota hai jo ek array ke elements ko ek saath mila kar ek final result nikaalta hai. Yeh aam tor par reduce() method ke saath use hota hai.
 
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// Reducer function
+function sumReducer(accumulator, currentValue) {
+    return accumulator + currentValue; // Add current value to the accumulator
+}
+
+// Using reduce with the reducer function
+const totalSum = numbers.reduce(sumReducer, 0);
+
+console.log(totalSum); // Output: 15
+```
 
 ## Set (has , delete , add , clear)
 

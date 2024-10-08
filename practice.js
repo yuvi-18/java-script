@@ -62,3 +62,4 @@ function formatDates(el) {
     const parts = el.split("-")
     return `${parts[2]}/${parts[1]}/${parts[0]}`
 }
+
