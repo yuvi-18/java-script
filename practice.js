@@ -56,3 +56,4 @@ const maphogaya = mapHu.map((el)=> el + 10)
 
 const dates = ["2024-1-23", "2023-2-12", "2019-5-13"]
 
+formated
