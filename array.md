@@ -178,6 +178,27 @@ The reduce() method in JavaScript is an array method that executes a reducer fun
 Reducer function ek aisa function hota hai jo ek array ke elements ko ek saath mila kar ek final result nikaalta hai. Yeh aam tor par reduce() method ke saath use hota hai.
 
 ```js
+
+const myNum = [1, 2, 3, 4]
+console.log(myNum);
+
+const newNum = myNum.reduce((acc, curr) => {
+    console.log(`accumulator is ${acc} and current value is ${curr}`);
+    return acc + curr
+}, 0)
+
+console.log(newNum);
+
+/*
+[ 1, 2, 3, 4 ]
+accumulator is 0 and current value is 1
+accumulator is 1 and current value is 2
+accumulator is 3 and current value is 3
+accumulator is 6 and current value is 4
+10
+*/
+
+// another example
 const numbers = [1, 2, 3, 4, 5];
 
 // Reducer function
@@ -189,6 +210,7 @@ function sumReducer(accumulator, currentValue) {
 const totalSum = numbers.reduce(sumReducer, 0);
 
 console.log(totalSum); // Output: 15
+
 ```
 
 ## Set (has , delete , add , clear)

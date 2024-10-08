@@ -63,3 +63,12 @@ function formatDates(el) {
     return `${parts[2]}/${parts[1]}/${parts[0]}`
 }
 
+const myNum = [1, 2, 3, 4]
+console.log(myNum);
+
+const newNum = myNum.reduce((acc, curr) => {
+    console.log(`accumulator is ${acc} and current value is ${curr}`);
+    return acc + curr
+}, 0)
+
+console.log(newNum);
