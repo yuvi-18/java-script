@@ -249,3 +249,14 @@ userIDs.clear();
 console.log(`Total unique user IDs after clearing: ${userIDs.size}`); // 0
 ```
 
+## Sorting 
+
+Sort() = method used to sort elements of an array in place.Sorts elements as strings in lexicographic order, not alphabetical, lexicographic = (alphabet + numbers + symbols) as strings.
+
+```js
+const numbers = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6];
+
+numbers.sort((a, b) => a - b); //[1,2,3,4,5,6,7,8,9,10]
+numbers.sort((a, b) => b - a); //[10,9,8,7,6,5,4,3,2,1]
+
+console.log(numbers);
