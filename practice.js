@@ -56,9 +56,9 @@ const maphogaya = mapHu.map((el) => el + 10)
 
 const dates = ["2024-1-23", "2023-2-12", "2019-5-13"]
 const formattedDates = dates.map(formatDates);
+// console.log(formattedDates);
 
 function formatDates(el) {
     const parts = el.split("-")
-    return `${parts[0]}/${parts[1]}/${parts[2]}`
+    return `${parts[2]}/${parts[1]}/${parts[0]}`
 }
-console.log(formattedDates);
