@@ -100,7 +100,7 @@ console.log(n);
 
 ## this method
 
-In JavaScript, this refers to the context in which a function is executed. It can be a bit tricky to understand because its value can change depending on how a function is called. 
+In JavaScript, this refers to the context in which a function is executed. It can be a bit tricky to understand because its value can change depending on how a function is called. Mainly used in objects.
 
 ```js
 
