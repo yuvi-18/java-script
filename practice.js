@@ -83,6 +83,6 @@ const meraObj= {
     }
 }
 
-meraObj.wlcMess()
+// meraObj.wlcMess()
 meraObj.username = 45
-meraObj.wlcMess()
+// meraObj.wlcMess()
