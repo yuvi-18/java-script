@@ -97,3 +97,23 @@ console.log(n);
     "price": "free"
 }
 ```
+
+## this method
+
+In JavaScript, this refers to the context in which a function is executed. It can be a bit tricky to understand because its value can change depending on how a function is called. 
+
+```js
+
+const meraObj= {
+    username: "kok09",
+    price: 989,
+
+    wlcMess: function () {
+        console.log(`${this.username} just logged in`);
+        
+    }
+}
+
+meraObj.wlcMess() // kok09 just logged in
+meraObj.username = 45
+meraObj.wlcMess() // 45 just logged in

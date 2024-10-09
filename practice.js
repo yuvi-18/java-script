@@ -64,11 +64,25 @@ function formatDates(el) {
 }
 
 const myNum = [1, 2, 3, 4]
-console.log(myNum);
+// console.log(myNum);
 
 const newNum = myNum.reduce((acc, curr) => {
-    console.log(`accumulator is ${acc} and current value is ${curr}`);
+    // console.log(`accumulator is ${acc} and current value is ${curr}`);
     return acc + curr
 }, 0)
 
-console.log(newNum);
+// console.log(newNum);
+
+const meraObj= {
+    username: "kok09",
+    price: 989,
+
+    wlcMess: function () {
+        console.log(`${this.username} just logged in`);
+        
+    }
+}
+
+meraObj.wlcMess()
+meraObj.username = 45
+meraObj.wlcMess()

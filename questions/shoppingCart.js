@@ -12,11 +12,11 @@ const items =[
         price:434,
     }, 
     {
-        name:"humty",
+        name:"humpty",
         price:484,
     }, 
     {
-        name:"dumty",
+        name:"dumpty",
         price:890,
     }
 ] 
