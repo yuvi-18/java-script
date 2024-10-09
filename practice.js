@@ -94,3 +94,11 @@ const arrowFunc = (a, b)=>{
 }
 
 // console.log(arrowFunc(2,3));
+
+
+let balance = 100;
+// if (balance === 100) console.log("lmao"),console.log("You are rich!");
+
+if(!false){
+    // console.log("hello")
+}
