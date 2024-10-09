@@ -69,6 +69,7 @@ const add = (a, b) => ({a+b});
 # Immediately Invoked Function Expressions (IIFE)
 
 Immediately invoked functions are often referred to as Immediately Invoked Function Expressions (IIFE). An IIFE is a function that runs as soon as it is defined. This is typically used to create a new scope, avoiding polluting the global namespace.
+End the function execution with a semicolon.
 
 ```js
 
@@ -93,4 +94,10 @@ console.log(income); // Outputs: 50000
 
 console.log(privateVariable); // ReferenceError: privateVariable is not defined
 
+
+// IIFE arrow function
+(() => {
+    console.log("This is an IIFE using an arrow function!");
+})();
 ```
+
