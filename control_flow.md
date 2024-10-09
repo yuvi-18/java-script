@@ -14,7 +14,7 @@ if(condition){
 
 ## if code without opening scope 
 
-!This is highly not recommended
+!The comma method is highly not recommended
 
 ```js
 
@@ -183,3 +183,28 @@ if (Object.keys(myObject).length === 0) {  // this returns an array
 
 ```
 
+# ternanry operator 
+
+The ternary operator in JavaScript is a concise way to perform conditional expressions(if else).
+
+```js
+
+// condition ? expressionIfTrue : expressionIfFalse;
+
+
+let age = 18;
+
+let message = age >= 18 ? "You are an adult." : "You are a minor.";
+console.log(message); // You are an adult.
+
+
+// Another Example
+
+let score = 85;
+let grade = score >= 90 ? "A" :
+            score >= 80 ? "B" :
+            score >= 70 ? "C" :
+            score >= 60 ? "D" : "F";
+
+console.log(grade); // B 
+```
