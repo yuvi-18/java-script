@@ -107,22 +107,23 @@ let month = "Feb";
 
 switch (month) {
     case "jan":
-        console.log('january');
+        // console.log('january');
         break;
     case "Feb":
-        console.log('Feb');
+        // console.log('Feb');
         break;
     case "March":
-        console.log('March');
+        // console.log('March');
         break;
     case "April":
-        console.log('April');
+        // console.log('April');
         break;
     case "May":
-        console.log('May');
+        // console.log('May');
         break;
 
     default:
-        console.log('Default hu bhai, mazdoor nhi');
+        // console.log('Default hu bhai, mazdoor nhi');
         break;
 }
+
