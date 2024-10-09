@@ -86,3 +86,11 @@ const meraObj= {
 // meraObj.wlcMess()
 meraObj.username = 45
 // meraObj.wlcMess()
+
+
+const arrowFunc = (a, b)=>{
+    const sum = a+b
+    return sum
+}
+
+console.log(arrowFunc(2,3));

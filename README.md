@@ -9,4 +9,4 @@ This is a practice folder or notes for java script where i have kept some import
 ## storage types
 ## arrays
 ## objects
-## functions
+## functions & Arrow functions
