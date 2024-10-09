@@ -93,4 +93,4 @@ const arrowFunc = (a, b)=>{
     return sum
 }
 
-console.log(arrowFunc(2,3));
+// console.log(arrowFunc(2,3));
