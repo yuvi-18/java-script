@@ -99,5 +99,11 @@ console.log(privateVariable); // ReferenceError: privateVariable is not defined
 (() => {
     console.log("This is an IIFE using an arrow function!");
 })();
+
+
+// named IIFE
+const myIIFE = function namedIIFE() {
+    console.log("This is a named IIFE!");
+}();
 ```
 

@@ -1,0 +1,1 @@
+An execution context is the environment in which the code is evaluated and executed. It plays a crucial role in how the JavaScript engine interprets the code.
