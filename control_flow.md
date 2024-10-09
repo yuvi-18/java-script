@@ -117,5 +117,69 @@ switch (month) {
 
 // March
 
+
+let month = "Feb";
+
+switch (month) {
+    case "jan":
+        console.log('january');
+        break;
+    case "Feb":
+        console.log('Feb');
+        break;
+    case "March":
+        console.log('March');
+        break;
+    case "April":
+        console.log('April');
+        break;
+    case "May":
+        console.log('May');
+        break;
+
+    default:
+        console.log('Default hu bhai, mazdoor nhi');
+        break;
+}
+
+// Feb 
+
+```
+
+# falsy values 
+
+1. false: The boolean value false.
+2. 0: The number zero.
+3. -0: Negative zero (still considered falsy).
+4. 0n: The BigInt representation of zero.
+5. "": An empty string.
+6. null: Represents the absence of any value.
+7. undefined: Indicates a variable that has been declared but not assigned a value.
+8. NaN: Stands for "Not-a-Number," a result of invalid numerical operations.
+
+# truthy values 
+
+" ", {}, [], "0", "false", fucntion(){}
+
+## To check if array is empty ⬇️
+
+```js
+
+if(array.length === 0){
+    // code goes here
+}
+
+```
+
+## To check if an object is empty
+
+```js
+
+let myObject = {};
+
+if (Object.keys(myObject).length === 0) {  // this returns an array
+  // code goes here
+}
+
 ```
 

@@ -103,22 +103,22 @@ if(!false){
     // console.log("hello")
 }
 
-let month = 3;
+let month = "Feb";
 
 switch (month) {
-    case 1:
+    case "jan":
         console.log('january');
         break;
-    case 2:
+    case "Feb":
         console.log('Feb');
         break;
-    case 3:
+    case "March":
         console.log('March');
         break;
-    case 4:
+    case "April":
         console.log('April');
         break;
-    case 5:
+    case "May":
         console.log('May');
         break;
 
