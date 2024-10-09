@@ -63,3 +63,59 @@ if(!false){
 }
 ```
 
+# Switch 
+
+```js
+
+let month = 3;
+
+switch (month) {
+    case 1:
+        console.log('january');
+    case 2:
+        console.log('Feb');
+    case 3:
+        console.log('March');
+    case 4:
+        console.log('April');
+    case 5:
+        console.log('May');
+
+    default:
+        console.log('Default hu bhai, mazdoor nhi');
+}
+/*
+March
+April
+May
+Default hu bhai, mazdoor nhi
+*/
+
+let month = 3;
+
+switch (month) {
+    case 1:
+        console.log('january');
+        break;
+    case 2:
+        console.log('Feb');
+        break;
+    case 3:
+        console.log('March');
+        break;
+    case 4:
+        console.log('April');
+        break;
+    case 5:
+        console.log('May');
+        break;
+
+    default:
+        console.log('Default hu bhai, mazdoor nhi');
+        break;
+}
+
+// March
+
+```
+
