@@ -149,5 +149,21 @@ for (const [key, value] of Object.entries(person)) {
 const ekArray = ['hello', 'lol', 'chomu', 'chotu']
 for (const key in ekArray) {
     // console.log(key);
-    console.log(ekArray[key])
+    // console.log(ekArray[key])
 }
+
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+fruits.forEach(function(fruit, i) {
+    // console.log(`${i}: ${fruit}`);
+});
+
+
+const files = [
+    { file: 'file1.js', filename: 'JavaScript' },
+    { file: 'file2.py', filename: 'Python' },
+    { file: 'file3.java', filename: 'Java' },
+    { file: 'file4.rb', filename: 'Ruby' }
+];
+// files.forEach((val)=> console.log(val.filename))

@@ -216,3 +216,101 @@ for (const key in ekArray) {
 }
 ```
 
+! For of loop for Array 
+! For in loop for Objects
+
+# For each loop
+
+The forEach method is an array method that executes a provided function once for each array element.
+
+```js
+
+array.forEach(callback(currentValue, index, array) {
+    // your code here
+});
+
+
+array.forEach(function() {
+    // Code to be executed for each element
+});
+
+
+
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+fruits.forEach(function(fruit, index) {
+    console.log(`${index}: ${fruit}`);
+});
+
+/*
+0: apple
+1: banana
+2: cherry
+*/
+```
+
+# Difference between for each and map
+
+## map
+
+Purpose: 
+Creates a new array populated with the results of calling a provided function on every element in the original array.
+
+Return Value:
+Returns a new array.
+
+Use Case: 
+When you need to transform the elements of an array and create a new array based on those transformations.
+
+```js
+
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6]
+
+```
+
+
+## for each
+
+Purpose:
+Executes a provided function once for each array element.
+
+Return Value:
+Returns undefined.
+
+Use Case:
+When you want to perform a side effect (like logging or modifying external variables) for each element but don’t need a new array.
+
+```js
+
+const numbers = [1, 2, 3];
+numbers.forEach(num => console.log(num * 2)); // Output: 2, 4, 6 (printed one by one)
+
+```
+
+!!! Use map when you need to transform data and get a new array.
+!!! Use forEach when you need to perform an action for each element without creating a new array.
+
+## acess objects in an array through For each loop
+
+```js
+
+const files = [
+    { file: 'file1.js', filename: 'JavaScript' },
+    { file: 'file2.py', filename: 'Python' },
+    { file: 'file3.java', filename: 'Java' },
+    { file: 'file4.rb', filename: 'Ruby' }
+];
+
+
+files.forEach((val)=> console.log(val.filename))
+
+/*
+JavaScript
+Python
+Java
+Ruby
+*/
+```
