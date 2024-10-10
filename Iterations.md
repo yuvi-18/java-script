@@ -57,3 +57,40 @@ element is 7
 */
 ```
 
+# while loop
+
+```js 
+
+while(condition){
+    // code goes here
+    increment
+}
+
+
+let i = 0;
+while(i <= 10){
+    console.log(`element is ${i}`);
+    i++;
+}
+
+
+// while loop for array
+
+let myboo = ['flash', 'batman', 'chadiman']
+
+let mypoo = 0;
+
+
+while (mypoo < myboo.length) {
+    console.log(myboo[mypoo]);    
+    mypoo++;
+}
+
+/*
+flash
+batman
+chadiman
+*/
+
+```
+
