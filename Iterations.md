@@ -94,3 +94,13 @@ chadiman
 
 ```
 
+# do while loop
+
+It runs atleast once no matter the condition
+
+```js
+
+do {
+    // cpde goes here
+    increment
+} while (condition);
