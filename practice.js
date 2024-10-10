@@ -127,3 +127,27 @@ switch (month) {
         break;
 }
 
+const person = {
+    name: 'Alice',
+    age: 25,
+    city: 'Wonderland'
+};
+
+// for (const key of Object.values(person)) {
+//     console.log(key); // Outputs: name, age, city
+// }
+
+for (const [key, value] of Object.entries(person)) {
+    // console.log(`${key}: ${value}`); 
+    // Outputs:
+    // name: Alice
+    // age: 25
+    // city: Wonderland
+}
+
+
+const ekArray = ['hello', 'lol', 'chomu', 'chotu']
+for (const key in ekArray) {
+    // console.log(key);
+    console.log(ekArray[key])
+}

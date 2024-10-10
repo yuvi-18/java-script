@@ -101,6 +101,118 @@ It runs atleast once no matter the condition
 ```js
 
 do {
-    // cpde goes here
+    // code goes here
     increment
 } while (condition);
+
+```
+
+# For of loop
+
+Mainly used for arrays,can't be used on objects cause they are not iterable but can be used on objects with some adittional methods.
+
+```js
+
+for (const itarator of object) {
+    // code goes here
+}
+
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+for (const value of fruits) {
+    console.log(value);
+} 
+
+/*
+apple
+banana
+cherry
+*/
+
+
+
+// another example 
+
+const message = "Hello";
+
+for (const char of message) {
+    console.log(char);
+}
+
+/*
+H
+e
+l
+l
+o
+*/
+
+
+
+// for of loop on 0bject
+
+// Can be used on objects through some methods like: Object.keys() , Object.values() , Object.entries()
+
+const person = {
+    name: 'Alice',
+    age: 25,
+    city: 'Wonderland'
+};
+
+for (const key of Object.keys(person)) {
+    console.log(key); // Outputs: name, age, city
+}
+
+for (const key of Object.values(person)) {
+    console.log(key); // Outputs: Alice, 25, Wonderland
+}
+
+for (const [key, value] of Object.entries(person)) {
+    console.log(`${key}: ${value}`); 
+    // Outputs:
+    // name: Alice
+    // age: 25
+    // city: Wonderland
+}
+```
+
+# For in loop
+
+Mainly used for objects, it is generally recommended to use it with objects rather than arrays due to potential issues with inherited properties.
+
+```js
+
+for (const key in object) {
+    // Code to be executed for each property
+}
+
+
+
+const person = {
+    name: 'Alice',
+    age: 25,
+    city: 'Wonderland'
+};
+
+for (const key in person) {
+    console.log(`${key}: ${person[key]}`); // person[key] this is used to acess the values.
+}
+
+/*
+name: Alice
+age: 25
+city: Wonderland
+*/
+
+
+
+// To use for in loop for array
+
+const ekArray = ['hello', 'lol', 'chomu', 'chotu']
+for (const key in ekArray) {
+    console.log(key); // 0 1 2 3
+    consol.log(ekArray[key]) // hello lol chomu chotu
+}
+```
+
