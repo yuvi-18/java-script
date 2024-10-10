@@ -127,3 +127,10 @@ switch (month) {
         break;
 }
 
+for (let index = 0; index <= 7; index++) {
+    if(index == 5){
+        console.log("Detected 5")
+        continue
+    }
+    console.log(`element is ${index}`)    
+}
