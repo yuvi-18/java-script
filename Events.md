@@ -9,3 +9,5 @@ Some common events in js are listed below
 ## Mouse Events 
 Mouse events are triggered by user interactions with the mouse:
 
+### Click
+
