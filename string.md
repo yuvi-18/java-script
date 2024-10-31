@@ -1,5 +1,4 @@
 ## split 
-
 The split method in JavaScript is used to divide a string into an array of smaller strings based on a specified separator.
 
 ```js
