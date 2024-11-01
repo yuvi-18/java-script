@@ -250,3 +250,38 @@ window.addEventListener('beforeunload', function(event) {
         });
 ```
 
+## Unload 
+Triggered when the window is being unloaded (e.g., when navigating away from the page).
+
+```js
+window.addEventListener('unload', () => {
+    console.log('Window is unloading');
+});
+```
+
+## Focus 
+Fires when the window gains focus.
+
+```js
+window.addEventListener('focus', () => {
+    console.log('Window focused');
+});
+```
+
+## Blur 
+Triggered when the window loses focus.
+
+```js
+window.addEventListener('blur', () => {
+    console.log('Window blurred');
+});
+```
+
+## Error 
+Occurs when an error is encountered while loading a resource or executing a script.
+
+```js
+window.addEventListener('error', (event) => {
+    console.error('Error occurred:', event.message);
+});
+```
