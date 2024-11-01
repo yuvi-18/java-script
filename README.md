@@ -14,4 +14,4 @@ This is a practice folder or notes for java script where i have kept some import
 ## Execution contexts
 ## Iterations
 ## control flow
-## Events 
+## Events
