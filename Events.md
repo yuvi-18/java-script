@@ -285,3 +285,34 @@ window.addEventListener('error', (event) => {
     console.error('Error occurred:', event.message);
 });
 ```
+
+# Touch Events (For Mobile)
+
+## Touchstart
+Triggered when a touch point is placed on the touch surface.
+
+```js
+const touchArea = document.getElementById('touchArea');
+touchArea.addEventListener('touchstart', (event) => {
+    console.log('Touch started:', event.touches);
+});
+```
+
+## Touch move 
+This event occurs when a touch point is moved along the touch surface.
+
+```js 
+touchArea.addEventListener('touchmove', (event) => {
+    console.log('Touch moved to:', event.touches[0].clientX, event.touches[0].clientY);
+    event.preventDefault(); // Prevent scrolling
+});
+```
+
+## Touch end
+This event is triggered when a touch point is removed from the touch surface.
+
+```js
+touchArea.addEventListener('touchend', (event) => {
+    console.log('Touch ended');
+});
+```
