@@ -177,3 +177,76 @@ input.addEventListener('input', (event) => {
     console.log('Current input value:', event.target.value);
 });
 ```
+
+# Window Events 
+
+### Load
+Fires when the entire page has fully loaded, including all dependent resources like images and stylesheets.
+
+```js
+window.addEventListener('load', () => {
+    console.log('Window fully loaded');
+});
+```
+
+### Resize 
+Triggered when the window is resized.
+
+```js
+window.addEventListener('resize', () => {
+    console.log('Window resized to:', window.innerWidth, 'x', window.innerHeight);
+});
+```
+
+### Scroll
+Triggered when the document is scrolled.
+
+```js
+window.addEventListener('scroll', () => {
+    console.log('Window scrolled to:', window.scrollY);
+});
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        document.body.style.backgroundColor = 'lightblue';
+    } else {
+        document.body.style.backgroundColor = 'white';
+    }
+});
+```
+
+### Before Unload
+Occurs when the user is about to leave the page, allowing you to prompt them with a confirmation dialog.
+
+```js
+window.addEventListener('beforeunload', function(event) {
+    // Display a confirmation dialog
+    event.preventDefault(); // Older browsers might require this
+    event.returnValue = ''; // Chrome requires this to show the dialog
+});
+
+
+// detailed Example
+        let isFormDirty = false; // Track if the form has unsaved changes
+
+        // Mark the form as dirty on input
+        document.getElementById('myForm').addEventListener('input', function() {
+            isFormDirty = true;
+        });
+
+        // Add the beforeunload event listener
+        window.addEventListener('beforeunload', function(event) {
+            if (isFormDirty) {
+                // This is necessary for some browsers to show the dialog
+                event.preventDefault();
+                // Most browsers show a generic message, this line may be ignored
+                event.returnValue = ''; 
+            }
+        });
+
+        // Reset the dirty flag on form submission
+        document.getElementById('myForm').addEventListener('submit', function() {
+            isFormDirty = false; // Reset the flag as the form is submitted
+        });
+```
+
