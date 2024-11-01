@@ -8,7 +8,7 @@ Some common events in js are listed below
 # Mouse Events 
 Mouse events are triggered by user interactions with the mouse:
 
-### Click
+## Click
 
 ```js 
 const button = document.getElementById('myButton');
@@ -18,7 +18,7 @@ button.addEventListener('click', function() {
 });
 ```
 
-### Onclick 
+## Onclick 
 
 ```js
 const button = document.getElementById('myButton');
@@ -32,7 +32,7 @@ AddEventListener (using click) can be used to attach multiple event handlers to 
 
 ! Prefer click over onclick.
 
-### dblclick
+## dblclick
 Fired when a mouse button is clicked twice in quick succession.
 
 ```js
@@ -41,7 +41,7 @@ alert('Area double-clicked!');
 });
 ```
 
-### Mouse Over
+## Mouse Over
 Triggered when the mouse pointer enters an element.
 
 ```js
@@ -50,7 +50,7 @@ document.getElementById('myElement').addEventListener('mouseover', function() {
 });
 ```
 
-### Mouse Out 
+## Mouse Out 
 Triggered when the mouse pointer leaves an element.
 
 ```js
@@ -59,7 +59,7 @@ document.getElementById('myElement').addEventListener('mouseout', function() {
 });
 ```
 
-### Mouse move 
+## Mouse move 
 Triggered when the mouse pointer moves within an element.
 
 ```js
@@ -68,7 +68,7 @@ document.getElementById('myElement').addEventListener('mousemove', function(even
 });
 ```
 
-### Mouse Down 
+## Mouse Down 
 This event occurs when a mouse button (left, middle, or right) is pressed down. It can be used to initiate actions like starting to drag an element or performing a selection.
 
 ```js
@@ -77,7 +77,7 @@ myElement.addEventListener('mousedown', function() {
 });
 ```
 
-### Mouse up
+## Mouse up
 Triggered when a mouse button is released.
 
 ```js
@@ -86,7 +86,7 @@ myElement.addEventListener('mouseup', function() {
 });
 ```
 
-### Comtext Menu 
+## Comtext Menu 
 Triggered when the right mouse button is clicked, often to show a context menu.
 
 ```js 
@@ -98,7 +98,7 @@ document.body.addEventListener('contextmenu', function(event) {
 
 # Keyboard Events
 
-### Keydown 
+## Keydown 
 Triggered when a key is pressed down.
 
 ```js
@@ -116,7 +116,7 @@ colorInp.addEventListener("keydown", function (event) {
 });
 ```
 
-### Key up 
+## Key up 
 Triggered when a key is released.
 
 ```js
@@ -125,13 +125,13 @@ document.addEventListener('keyup', function(event) {
 });
 ```
 
-### Keypress
+## Keypress
 (Note: This event is deprecated and not recommended for use in modern applications.) 
 It was triggered when a key that produces a character value is pressed down. Instead, use keydown.
 
 # Form Evnets 
 
-### Submit 
+## Submit 
 Triggered when a form is submitted.
 
 ```js
@@ -141,7 +141,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
 });
 ```
 
-### change
+## change
 This event occurs when the value of an input field changes.
 
 ```js
@@ -151,7 +151,7 @@ input.addEventListener('change', (event) => {
 });
 ```
 
-### Focus
+## Focus
 This event is triggered when an input field gains focus.
 
 ```js
@@ -160,7 +160,7 @@ input.addEventListener('focus', () => {
 });
 ```
 
-### Blur
+## Blur
 This event occurs when an input field loses focus.
 
 ```js
@@ -169,7 +169,7 @@ input.addEventListener('blur', () => {
 });
 ```
 
-### Input 
+## Input 
 This event is triggered whenever the value of an input field changes, including when typing.
 
 ```js
@@ -180,7 +180,7 @@ input.addEventListener('input', (event) => {
 
 # Window Events 
 
-### Load
+## Load
 Fires when the entire page has fully loaded, including all dependent resources like images and stylesheets.
 
 ```js
@@ -189,7 +189,7 @@ window.addEventListener('load', () => {
 });
 ```
 
-### Resize 
+## Resize 
 Triggered when the window is resized.
 
 ```js
@@ -198,7 +198,7 @@ window.addEventListener('resize', () => {
 });
 ```
 
-### Scroll
+## Scroll
 Triggered when the document is scrolled.
 
 ```js
@@ -215,7 +215,7 @@ window.addEventListener('scroll', function() {
 });
 ```
 
-### Before Unload
+## Before Unload
 Occurs when the user is about to leave the page, allowing you to prompt them with a confirmation dialog.
 
 ```js
