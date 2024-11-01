@@ -316,3 +316,201 @@ touchArea.addEventListener('touchend', (event) => {
     console.log('Touch ended');
 });
 ```
+
+# Clipboard Events
+
+## Copy
+Triggered when the content is copied to the clipboard
+
+```js
+document.addEventListener('copy', (event) => {
+    console.log('Content copied to clipboard');
+    // You can modify the copied text
+    event.clipboardData.setData('text/plain', 'Modified text');
+    event.preventDefault(); // Prevent the default copy action
+});
+```
+
+## Cut 
+This event is triggered when the user cuts content to the clipboard
+
+```js
+document.addEventListener('cut', (event) => {
+    console.log('Content cut to clipboard');
+    event.preventDefault(); // Prevent the default cut action
+});
+
+
+// detailed example
+document.addEventListener('cut', (event) => {
+    const selectedText = window.getSelection().toString();
+    
+    // Example validation: Prevent cutting if the selected text is "forbidden"
+    if (selectedText === 'forbidden') {
+        event.preventDefault(); // Prevent cut action
+        alert("Cutting this text is not allowed.");
+    } else {
+        console.log('Content cut:', selectedText);
+        // You could also manipulate clipboard data here if needed
+    }
+});
+```
+
+## Paste
+This event is triggered when the user pastes content from the clipboard
+
+```js
+document.addEventListener('paste', (event) => {
+    const pastedData = event.clipboardData.getData('text/plain');
+    console.log('Pasted content:', pastedData);
+    // You can modify the pasted content or prevent the default paste
+    event.preventDefault(); // Prevent the default paste action
+    // Optionally, insert modified content instead
+    document.execCommand('insertText', false, 'Modified pasted text');
+});
+
+
+
+// paste button in js
+const textArea = document.getElementById('textArea');
+const pasteButton = document.getElementById('pasteButton');
+
+pasteButton.addEventListener('click', () => {
+    // Use the Clipboard API to get the pasted content
+    navigator.clipboard.readText()
+        .then(text => {
+            // Insert the pasted text into the text area
+            textArea.value += text; // Append text to existing content
+            console.log('Pasted content:', text);
+        })
+        .catch(err => {
+            console.error('Failed to read clipboard contents: ', err);
+        });
+});
+
+// Optional: You can also listen for paste events directly
+textArea.addEventListener('paste', (event) => {
+    const pastedData = event.clipboardData.getData('text/plain');
+    console.log('Pasted content from paste event:', pastedData);
+    // You can modify the pasted content if needed
+});
+```
+
+# Media Events 
+
+## Play
+The play event is triggered when a media element (like <audio> or <video>) starts playing.
+
+```js
+const video = document.getElementById('myVideo');
+video.addEventListener('play', () => {
+    console.log('Media is now playing.');
+    // Update UI to reflect the playing state
+});
+```
+
+## Pause 
+The pause event is triggered when the media playback is paused
+
+```js
+video.addEventListener('pause', () => {
+    console.log('Media is paused.');
+    // Update UI to reflect the paused state
+});
+```
+
+## Ended
+The ended event is triggered when the media playback has completed.
+
+```js
+video.addEventListener('ended', () => {
+    console.log('Media playback has ended.');
+    // Update UI, e.g., show a "Video finished" message or restart
+});
+```
+!These can be directly used on video and audio tags.
+
+# Drag Events 
+
+## Drag
+Triggered when an element is being dragged.
+
+```js
+element.addEventListener('drag', (event) => {
+    console.log('Dragging...');
+});
+```
+
+## Drag Enter
+Triggered when the dragged element enters a valid drop target. This event can be used to indicate that a drop is possible.
+
+```js
+dropZone.addEventListener('dragenter', (event) => {
+    event.preventDefault(); // Prevent default to allow drop
+    dropZone.style.border = '2px dashed green'; // Visual cue
+});
+```
+
+!By default, when a user drags an item over certain elements (like links or other interactive elements), the browser may not allow dropping. Calling preventDefault() on the dragenter event indicates that you want to accept the drop in that element.
+
+## Drag over 
+Fired continuously while the dragged element is over a valid drop target.
+
+```js
+dropZone.addEventListener('dragover', (event) => {
+    event.preventDefault(); // Necessary to allow drop
+});
+```
+
+!In simple terms:
+
+dragenter: This event fires once when a dragged item first enters a drop zone. It's often used to indicate that the drop zone is ready to accept the item (like changing its color).
+
+dragover: This event fires continuously as the dragged item stays over the drop zone. You use it to control whether dropping is allowed by calling event.preventDefault().
+
+So, dragenter is for the initial entry into the drop zone, while dragover keeps firing as long as the item is over the zone.
+
+## Drag leave 
+Triggered when the dragged element leaves a valid drop target. This event can be used to reset the appearance of the drop target.
+
+```js
+dropZone.addEventListener('dragleave', () => {
+    dropZone.style.border = ''; // Reset visual cue
+});
+```
+
+## Drag start
+Triggered when the user starts dragging an element. This is where you typically set up data to be transferred during the drag operation.
+
+
+```js
+element.addEventListener('dragstart', (event) => {
+    event.dataTransfer.setData('text/plain', 'Some data to drag');
+});
+```
+
+
+## Drag end
+Triggered when the drag operation is complete, regardless of whether it was successful or not. This event is useful for cleaning up after the drag operation.
+
+
+```js
+element.addEventListener('dragend', () => {
+    element.style.opacity = ''; // Reset any styles changed during drag
+});
+```
+
+## Drop
+Triggered when the dragged element is dropped on a valid drop target. This event is where you can handle the dropped data.
+
+```js
+dropZone.addEventListener('drop', (event) => {
+    event.preventDefault(); // Prevent default action (e.g., open as link)
+    const data = event.dataTransfer.getData('text/plain');
+    console.log('Dropped data:', data);
+    // Handle the dropped data (e.g., append it to a list)
+});
+```
+
+Find more events: 
+https://developer.mozilla.org/en-US/docs/Web/Events
