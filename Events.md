@@ -5,7 +5,7 @@ In simple terms an events is a signal that something has happened.
 
 Some common events in js are listed below 
 
-## Mouse Events 
+# Mouse Events 
 Mouse events are triggered by user interactions with the mouse:
 
 ### Click
@@ -93,5 +93,87 @@ Triggered when the right mouse button is clicked, often to show a context menu.
 document.body.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Prevent the default context menu from appearing
     alert('Custom context menu!'); // Display a custom message
+});
+```
+
+# Keyboard Events
+
+### Keydown 
+Triggered when a key is pressed down.
+
+```js
+document.addEventListener('keydown', function(event) {
+    console.log('Key down:', event.key);
+});
+
+
+// another example
+
+colorInp.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        document.body.style.backgroundColor = colorInp.value;
+    }
+});
+```
+
+### Key up 
+Triggered when a key is released.
+
+```js
+document.addEventListener('keyup', function(event) {
+    console.log('Key up:', event.key);
+});
+```
+
+### Keypress
+(Note: This event is deprecated and not recommended for use in modern applications.) 
+It was triggered when a key that produces a character value is pressed down. Instead, use keydown.
+
+# Form Evnets 
+
+### Submit 
+Triggered when a form is submitted.
+
+```js
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+    console.log('Form submitted');
+});
+```
+
+### change
+This event occurs when the value of an input field changes.
+
+```js
+const input = document.getElementById('myInput');
+input.addEventListener('change', (event) => {
+    console.log('Input changed to:', event.target.value);
+});
+```
+
+### Focus
+This event is triggered when an input field gains focus.
+
+```js
+input.addEventListener('focus', () => {
+    console.log('Input is focused');
+});
+```
+
+### Blur
+This event occurs when an input field loses focus.
+
+```js
+input.addEventListener('blur', () => {
+    console.log('Input lost focus');
+});
+```
+
+### Input 
+This event is triggered whenever the value of an input field changes, including when typing.
+
+```js
+input.addEventListener('input', (event) => {
+    console.log('Current input value:', event.target.value);
 });
 ```
