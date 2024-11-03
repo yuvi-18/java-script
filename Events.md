@@ -514,3 +514,22 @@ dropZone.addEventListener('drop', (event) => {
 
 Find more events: 
 https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+# Event Bubbling 
+Event bubbling is a key concept in JavaScript that refers to the way events propagate in the DOM (Document Object Model). When an event occurs on an element, it first runs the event handler on that specific element, and then it "bubbles up" to its parent elements, allowing them to respond to the event as well.
+
+!To stop this we use stop propogation method
+
+```js
+const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+
+parent.addEventListener('click', () => {
+    console.log('Parent clicked!');
+});
+
+child.addEventListener('click', (event) => {
+    console.log('Child clicked!');
+    event.stopPropagation(); // Prevents the parent click event from firing
+});
