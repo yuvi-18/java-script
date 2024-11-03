@@ -533,3 +533,18 @@ child.addEventListener('click', (event) => {
     console.log('Child clicked!');
     event.stopPropagation(); // Prevents the parent click event from firing
 });
+```
+
+# Remove event listener
+removeEventListener is a method in JavaScript that allows you to remove an event listener that was previously added to an element using addEventListener. This is useful for preventing memory leaks or unwanted behavior in your application, especially if the event listener is no longer needed.
+
+Same Function Reference: To successfully remove an event listener, the function reference passed to removeEventListener must be the same as the one passed to addEventListener. This means you cannot use an anonymous function for both; you need to define the function separately.
+
+```js
+function handleClick() {
+  alert('Clicked!');
+}
+
+myButton.addEventListener('click', handleClick);
+myButton.removeEventListener('click', handleClick);
+```
