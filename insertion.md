@@ -26,12 +26,25 @@ console.log(element.dataset.role); // "admin"
 # Insertion methods
 
 ## Append
+adding an element to the end of a parent element
 
 ```js
  let div = document.createElement("div");
     div.innerHTML = "I have been inserted <b>by harry</b>"
     div.setAttribute("class", "created");
     document.querySelector(".container").append(div);
+```
+
+## Prepend 
+refers to adding an element to the beginning of a parent element
+
+```js
+const parentElement = document.getElementById('parent');
+const newElement = document.createElement('div');
+newElement.textContent = 'I am the first child!';
+
+// Prepend the new element to the parent element
+parentElement.prepend(newElement);
 ```
 
 ## Append child
@@ -109,3 +122,4 @@ const parent = document.getElementById('container');
 const childToRemove = parent.firstChild;
 parent.removeChild(childToRemove);
 ```
+
