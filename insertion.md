@@ -47,6 +47,45 @@ newElement.textContent = 'I am the first child!';
 parentElement.prepend(newElement);
 ```
 
+## before
+The before() method inserts a specified element or text before a target element.
+
+```js
+const targetElement = document.getElementById('target');
+const newElement = document.createElement('div');
+newElement.textContent = 'I am before the target!';
+
+// Insert the new element before the target element
+targetElement.before(newElement);
+```
+
+## after
+The after() method inserts a specified element or text after a target element.
+
+```js
+const targetElement = document.getElementById('target');
+const newElement = document.createElement('div');
+newElement.textContent = 'I am after the target!';
+
+// Insert the new element after the target element
+targetElement.after(newElement);
+```
+
+## replace with
+used to replace a specified element with new content in the DOM.
+
+```js
+// Select the element to be replaced
+const oldElement = document.getElementById('oldElement');
+
+// Create a new element
+const newElement = document.createElement('div');
+newElement.textContent = 'I replaced the old element!';
+
+// Replace the old element with the new element
+oldElement.replaceWith(newElement);
+```
+
 ## Append child
 Adds a single child node to the end of the list of children of a specified parent node.
 
@@ -57,18 +96,7 @@ child.textContent = 'This is a child paragraph.';
 parent.appendChild(child);
 ```
 
-## insert before 
-Description: Inserts a new node before a specified existing child node of a parent node.
-
-```js
-const parent = document.getElementById('container');
-const newChild = document.createElement('p');
-newChild.textContent = 'Inserted before the first child.';
-const firstChild = parent.firstChild;
-parent.insertBefore(newChild, firstChild);
-```
-
-## insertAdjacentHTML
+## insertAdjacentHTML/text
 Parses the specified text as HTML and inserts the resulting nodes at a specified position relative to an existing element.
 
 
@@ -95,25 +123,6 @@ newElement.textContent = 'Inserted element using insertAdjacentElement.';
 parent.insertAdjacentElement('afterend', newElement);
 ```
 
-## replaceChild
-Replaces an existing child node with a new node.
-
-
-```js
-// Select the parent element
-const container = document.getElementById('container');
-
-// Create a new paragraph element
-const newParagraph = document.createElement('p');
-newParagraph.textContent = 'This is the new paragraph.';
-
-// Select the old paragraph to be replaced
-const oldParagraph = document.getElementById('oldParagraph');
-
-// Replace the old paragraph with the new paragraph
-container.replaceChild(newParagraph, oldParagraph);
-```
-
 ## removeChild
 Removes a specified child node from a parent node.
 
@@ -123,3 +132,52 @@ const childToRemove = parent.firstChild;
 parent.removeChild(childToRemove);
 ```
 
+## remove
+used to remove an element from the DOM.
+
+```js
+// Select the element to be removed
+const elementToRemove = document.getElementById('elementId');
+
+// Remove the selected element from the DOM
+elementToRemove.remove();
+```
+
+# className
+It represents the entire list of class names of an element as a single string.
+
+
+```js
+const element = document.getElementById('myElement');
+
+// Assuming the element initially has classes "class1 class2"
+console.log(element.className); // Output: "class1 class2"
+
+// Set a new class name
+element.className = 'newClass';
+
+// Now, the previous classes are removed
+console.log(element.className); // Output: "newClass"
+```
+
+# classList
+It provides a more convenient way to access and manipulate the classes of an element as individual items.
+
+
+```js
+const element = document.getElementById('myElement');
+
+// Add a class
+element.classList.add('newClass');
+
+// Remove a class
+element.classList.remove('oldClass');
+
+// Toggle a class
+element.classList.toggle('active');
+
+// Check if it contains a class
+if (element.classList.contains('myClass')) {
+    console.log('Element has myClass');
+}
+```
