@@ -1,2 +1,3 @@
 1. input se strings values aati hai
 2. event bubbling refers to when an event fires for an element its parent also fires it events for ex :- onclick
+3. In HTML, a "data attribute" is a custom attribute that allows you to store extra information on an element without using additional properties or classes.Data attributes are prefixed with data-, followed by a name of your choice.You can access these attributes in JavaScript using the dataset property.
