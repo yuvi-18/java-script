@@ -181,3 +181,4 @@ if (element.classList.contains('myClass')) {
     console.log('Element has myClass');
 }
 ```
+
