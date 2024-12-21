@@ -150,6 +150,12 @@ The .map() method in JavaScript is an array method that creates a new array by a
 
 ```js
 
+/*
+array.map(function(currentValue, index, array) {
+  // Return element for the new array
+});
+*/
+
 const mapHu = [2,3,4,5,6,7,8]
 const maphogaya = mapHu.map((el)=> el + 10)
 console.log(mapHu); // [ 2,3,4,5,6,7,8]
@@ -187,7 +193,7 @@ console.log(myNum);
 const newNum = myNum.reduce((acc, curr) => {
     console.log(`accumulator is ${acc} and current value is ${curr}`);
     return acc + curr
-}, 0)
+}, 0)  // works the same without giving an initial value (0)
 
 console.log(newNum);
 
