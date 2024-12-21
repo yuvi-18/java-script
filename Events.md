@@ -523,39 +523,49 @@ example use case of drag and drop:-
 
 ```js
 
-let king = document.querySelector('.king')
-let squares = document.querySelectorAll('.square')
+const king = document.querySelector('.king'),
+              squares = document.querySelectorAll('.square'),
+              info = document.querySelector('p');
+        
+        let beingDragged;
 
+        king.addEventListener('drag', (e)=>{
+            beingDragged = e.target;  // specifies what has started to drag.
+            info.textContent = `${e.target.classList} is being dragged...`
+        })
 
-king.addEventListener('dragstart', dragstart)
-
-
-function dragstart(e){
-    beingDragged = e.target;  // specifies what has started to drag.
-}
-
-
-squares.forEach(square =>{
-    square.addEventListener("dragover", dragover)
-    square.addEventListener("drop", dragdrop)
-})
+        king,addEventListener('dragend', (e)=>{
+            info.textContent = `${e.target.classList} has been dropped`
+        })
+        
+        squares.forEach(square =>{
+            square.addEventListener('dragover', (e)=>{
+                e.preventDefault()
+            });
+            square.addEventListener('drop', (e)=>{
+                e.target.append(beingDragged)
+            });
+        })
  
-let beingDragged;  // it is acting like the whole object that is being dragged, for example if we are dragging an element of image over something then it is the whole image and we can append it to anywhere by event listeners.
+
+/*
+let beingDragged;   it is acting like the whole object that is being dragged, for example if we are dragging an element of image over something then it is the whole image and we can append it to anywhere by event listeners.
 
 
 function dragover(e){
-    e.preventDefault()  // to drop somthing on somehting it is neccassary.
+    e.preventDefault()   to drop somthing on somehting it is neccassary.
 }
 
-/*The dragover function prevents the default behavior of the browser. By default, the browser does not allow a dragged element to be dropped onto an element, so calling e.preventDefault() makes it possible to drop the element onto the target (the square).*/
+The dragover function prevents the default behavior of the browser. By default, the browser does not allow a dragged element to be dropped onto an element, so calling e.preventDefault() makes it possible to drop the element onto the target (the square).
 
 function dragdrop(){
     e.target.append(beingDragged)
 }
 
-/*e.target refers to the element that the dragged element is dropped onto, which is one of the square elements.*/
+e.target refers to the element that the dragged element is dropped onto, which is one of the square elements.
+*/
 
-
+```
 
 
 Find more events: 

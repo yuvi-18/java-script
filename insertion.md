@@ -27,6 +27,7 @@ console.log(element.dataset.role); // "admin"
 
 ## Append
 adding an element to the end of a parent element
+Yes, the append() method does indeed remove the element from its current parent and adds it to the new parent.
 
 ```js
  let div = document.createElement("div");
