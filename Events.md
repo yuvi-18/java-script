@@ -480,7 +480,7 @@ dropZone.addEventListener('dragleave', () => {
 ```
 
 ## Drag start
-Triggered when the user starts dragging an element. This is where you typically set up data to be transferred during the drag operation.
+Triggered when the user starts dragging an element. This is where you typically set up data to be transferred during the drag operation.It can occur multiple times for example if someone drags something and then stops and drags again the drag start will fire again and it will fire until the event is starting to drag multiple times.
 
 
 ```js
