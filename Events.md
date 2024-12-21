@@ -430,6 +430,8 @@ video.addEventListener('ended', () => {
 ```
 !These can be directly used on video and audio tags.
 
+
+
 # Drag Events 
 
 ## Drag
@@ -511,6 +513,50 @@ dropZone.addEventListener('drop', (event) => {
     // Handle the dropped data (e.g., append it to a list)
 });
 ```
+
+
+DragOver, DragEnter, DragLeave, Drop are mainly used on the elemnts on which an item is being dragged,for ex:- a sqaure box over which an element is being dragged will change it's color with the help of an event listener.
+DragEnd is generaly used to tell us that the dragging has stopped.
+
+example use case of drag and drop:-
+
+
+```js
+
+let king = document.querySelector('.king')
+let squares = document.querySelectorAll('.square')
+
+
+king.addEventListener('dragstart', dragstart)
+
+
+function dragstart(e){
+    beingDragged = e.target;  // specifies what has started to drag.
+}
+
+
+squares.forEach(square =>{
+    square.addEventListener("dragover", dragover)
+    square.addEventListener("drop", dragdrop)
+})
+ 
+let beingDragged;  // it is acting like the whole object that is being dragged, for example if we are dragging an element of image over something then it is the whole image and we can append it to anywhere by event listeners.
+
+
+function dragover(e){
+    e.preventDefault()  // to drop somthing on somehting it is neccassary.
+}
+
+/*The dragover function prevents the default behavior of the browser. By default, the browser does not allow a dragged element to be dropped onto an element, so calling e.preventDefault() makes it possible to drop the element onto the target (the square).*/
+
+function dragdrop(){
+    e.target.append(beingDragged)
+}
+
+/*e.target refers to the element that the dragged element is dropped onto, which is one of the square elements.*/
+
+
+
 
 Find more events: 
 https://developer.mozilla.org/en-US/docs/Web/Events
