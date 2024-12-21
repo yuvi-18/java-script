@@ -10,6 +10,8 @@ console.log(someArr)
 # To add value at last in a array
 
 ## .push()
+Adds one or more elements at the end of an array.
+
 
 ```js 
 const myArr = [111,22,33,434]
