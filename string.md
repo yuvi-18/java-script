@@ -20,3 +20,26 @@ function formatDates(el) {
     return `${parts[2]}/${parts[1]}/${parts[0]}`
 }
 ```
+
+## endsWith
+This checks if a particular string ends with certain things.
+ex:- 
+
+
+```js
+str.endsWith(searchString, length)
+
+
+let str = "Hello, World!";
+
+// Check if string ends with "World!"
+console.log(str.endsWith("World!"));  // true
+
+// Check if string ends with "world" (case-sensitive)
+console.log(str.endsWith("world"));  // false
+
+// Check if string ends with "Hello" when considering only the first 5 characters
+console.log(str.endsWith("Hello", 5));  // true
+
+console.log(str.endsWith("Hello", 4));  // false
+```
