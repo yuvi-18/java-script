@@ -43,3 +43,33 @@ console.log(str.endsWith("Hello", 5));  // true
 
 console.log(str.endsWith("Hello", 4));  // false
 ```
+
+
+## Split
+this method of string splits a string into an array and then can be accessed further.
+
+```js
+let str = "Hello World";
+let result = str.split(" ");
+console.log(result); // Output: ["Hello", "World"]
+
+
+let result = str.split(" ")[1];
+console.log(result); // World
+```
+
+
+## replace / replaceAll
+this mehtod allows us to replace curtain part of a string with certain part,It worls on only one occurance of that part but for doing it for all occurances use replaceAll.
+Replace all occurrences of a specified substring or pattern in a string. This is different from the regular replace() method, which only replaces the first occurrence unless a global regular expression/regex flag (/g) is used.
+ex:-
+
+
+```js
+str.replace(searchValue, newValue)
+
+
+let str = "Hello World";
+let result = str.replace("World", "JavaScript");
+console.log(result); // Output: "Hello JavaScript"
+```
