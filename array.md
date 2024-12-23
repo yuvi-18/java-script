@@ -89,12 +89,14 @@ converts values into an array like objects,strings etc
 Array.from({name : "messi"}) // should state if you want to convert the keys of the objects or values otherwise outcome: [] 
 
 ```js 
-const obj = { name: "messi" };
+const str = "Hello";
+const arr = Array.from(str);
+console.log(arr); // ['H', 'e', 'l', 'l', 'o']`
 
-// Get an array of the keys of the object
-const keysArray = Object.keys(obj); // ['name']
 
-console.log(keysArray);
+const str = "Hello";
+const arr = Array.from(str, char => char.toUpperCase());
+console.log(arr); // ['H', 'E', 'L', 'L', 'O']
 ```
 
 ## Array .of()
