@@ -294,9 +294,3 @@ people.sort((a, b) => b.name.localeCompare(a.name)); //REVERSE
 
 console.log(people);
 ```
-
-[Download git from:- https://git-scm.com/downloads](https://git-scm.com/downloads)
-
-```
-git --version
-```
