@@ -297,6 +297,6 @@ console.log(people);
 
 [Download git from:- https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-```git
+```
 git --version
 ```
