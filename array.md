@@ -97,6 +97,7 @@ console.log(arr); // ['H', 'e', 'l', 'l', 'o']`
 const str = "Hello";
 const arr = Array.from(str, char => char.toUpperCase());
 console.log(arr); // ['H', 'E', 'L', 'L', 'O']
+
 ```
 
 ## Array .of()
