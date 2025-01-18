@@ -604,3 +604,4 @@ function handleClick() {
 myButton.addEventListener('click', handleClick);
 myButton.removeEventListener('click', handleClick);
 ```
+
