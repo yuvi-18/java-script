@@ -68,7 +68,6 @@ ex:-
 ```js
 str.replace(searchValue, newValue)
 
-
 let str = "Hello World";
 let result = str.replace("World", "JavaScript");
 console.log(result); // Output: "Hello JavaScript"
