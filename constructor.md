@@ -1,4 +1,4 @@
-# constructor
+# constructor in function
 
 A constructor function in JavaScript is a regular function that is used to create and initialize objects. It follows the convention of starting with an uppercase letter and is called using the new keyword.
 
@@ -48,3 +48,6 @@ A very good morning Yuvi of age 19 and pronoun of he/him.
 A very good morning shivam of age 19 and pronoun of she/her.
 */
 ```
+
+# constructor in class
+
