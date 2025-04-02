@@ -17,3 +17,4 @@ This is a practice folder or notes for java script where i have kept some import
 ## Events
 ## set interval
 ## insertion methods
+## constructor
