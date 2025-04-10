@@ -74,3 +74,16 @@ let str = "Hello World";
 let result = str.replace("World", "JavaScript");
 console.log(result); // Output: "Hello JavaScript"
 ```
+
+## text()
+
+The .text() method in JavaScript is primarily used in jQuery (a js library) to get or set the text content of an element.
+If a <p> element already contains some text and you use the .text() method to set it to "Hello, World!", the previous text will be completely replaced.
+
+```js
+let textValue = $("p").text();
+console.log(textValue); // Retrieves text inside `<p>` elements
+
+$("p").text("Hello, World!");
+// Changes the text inside `<p>` elements to "Hello, World!"
+```
