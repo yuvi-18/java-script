@@ -311,3 +311,5 @@ console.log(allPositive); // true
 const mixedNumbers = [2, -4, 6, 8];
 console.log(mixedNumbers.every(num => num > 0)); // false
 ```
+
+.map returns a new array and .every returns a new boolean
