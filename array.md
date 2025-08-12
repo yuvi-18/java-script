@@ -294,3 +294,20 @@ people.sort((a, b) => b.name.localeCompare(a.name)); //REVERSE
 
 console.log(people);
 ```
+
+
+## Every 
+
+The .every() method in JavaScript is an array function that checks whether all elements in an array pass a test (a function you provide).
+
+Returns: true if every element passes the test, otherwise false.
+
+
+```jsx
+const numbers = [2, 4, 6, 8];
+const allPositive = numbers.every(num => num > 0);
+console.log(allPositive); // true
+
+const mixedNumbers = [2, -4, 6, 8];
+console.log(mixedNumbers.every(num => num > 0)); // false
+```
